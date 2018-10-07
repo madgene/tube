@@ -1,0 +1,22 @@
+[package]
+name = "tube"
+version = "0.1.0"
+authors = ["duke"]
+edition = "2018"
+[dependencies]
+rocket = { path = "/home/duke/workspace/github/Rocket/core/lib" }
+rocket_codegen = { path = "/home/duke/workspace/github/Rocket/core/codegen" }
+# rocket_contrib = { path = "/home/duke/workspace/github/Rocket/contrib/lib" }
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+config = "0.9.1"
+lazy_static = "1.1.0"
+
+[dependencies.rocket_contrib]
+path = "/home/duke/workspace/github/Rocket/contrib/lib"
+default-features = false
+features = ["static_files", "tera_templates"]
+
+[dependencies.shell]
+git = "https://github.com/google/rust-shell"
